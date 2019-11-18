@@ -24,11 +24,27 @@
     "eslint-config-prettier": "^6.6.0",
     "eslint-plugin-prettier": "^3.1.1",
     "nwb": "0.23.x",
-    "prettier": "^1.19.1",
-    "semantic-release": "^15.13.31"
+    "prettier": "^1.19.1"
   },
   "author": "David Berner <david@davidberner.co.uk>",
   "homepage": "https://davidberner.co.uk",
   "license": "MIT",
-  "repository": "https://github.com/DaveOrDead/light-levels"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaveOrDead/light-levels.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DaveOrDead/light-levels/issues"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "keywords": [
+    "light levels",
+    "light-level",
+    "media",
+    "devicelight",
+    "Ambient Light Sensor"
+  ]
 }

@@ -13,17 +13,29 @@ It is recommended to combine this plugin with the PostCSS plugin [postcss-light-
 It is worth nothing that both this JS library and PostCSS plugin can be used independently if you wish.
 
 [light-level css @media feature]: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/light-level
+[postcss-light-levels]: https://github.com/daveordead/postcss-light-levels
+[build-badge]: https://travis-ci.com/DaveOrDead/light-levels.svg?branch=master
+[build]: https://travis-ci.com/DaveOrDead/light-levels
+[npm-badge]: https://raster.shields.io/npm/v/light-levels.png
+[npm]: https://www.npmjs.com/package/light-levels
+[coveralls-badge]: https://coveralls.io/repos/github/DaveOrDead/light-levels/badge.svg?branch=master
+[coveralls]: https://coveralls.io/github/DaveOrDead/light-levels?branch=master
 
-[postcss-light-levels] https://github.com/daveordead/postcss-light-levels [build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square [build]: https://travis-ci.org/user/repo [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square [npm]: https://www.npmjs.org/package/npm-package [coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square [coveralls]: https://coveralls.io/github/user/repo
+
 
 ## Table of Contents
 
 - [Installation](#installation)
   - [npm](#npm)
-  - [Direct `<script>` include](#direct-script-include)
+  - [CDN](#CDN)
 - [Usage](#usage)
-  - [JavaScript](#javascript)
-  - [CSS](#css)
+  - [ES Module](#esmodule)
+  - [CommonJS](#CommonJS)
+  - [UMD](#UMD)
+  - [CSS](#CSS)
+- [Options](#options)
+- [License](#license)
+
 
 ## Installation
 
@@ -33,17 +45,16 @@ It is worth nothing that both this JS library and PostCSS plugin can be used ind
 npm install light-levels --save
 ```
 
-### Direct `<script>` include
+### CDN
 
 ```html
 <script src="https://unpkg.com/light-levels/umd/light-levels.min.js"></script>
 ```
+A vanilla javascript plugin for polyfilling the light-level CSS @media feature.
 
 - [Usage](#usage)
 
-### JavaScript
-
-If using a module bundler, such as webpack, first import `lightLevels`.
+### ES module
 
 ```js
 import lightLevels from "light-levels";
@@ -51,9 +62,27 @@ import lightLevels from "light-levels";
 lightLevels();
 ```
 
+### CommonJS
+
+```js
+const lightLevels =  require("light-levels");
+
+lightLevels();
+```
+
+### UMD
+
+If you use the direct `<script>` approach you can instantiate `lightLevels as a browser global.
+
+```html
+<script>
+    lightLevel();
+</script>
+```
+
 ### CSS
 
-In your CSS, write class names that match those applied to the HTML.
+By default this plugin applies classes of `.light-level-dim`, `.light-level-normal` or `.light-level-washed` to match the values of the [light-level media query](https://drafts.csswg.org/mediaqueries-5/#light-level).
 
 ```css
 /* Styles to apply in low light  environments */
@@ -75,4 +104,22 @@ In your CSS, write class names that match those applied to the HTML.
 }
 ```
 
-Copyright (c) 2019 [David Berner](http://davidberner.co.uk) Licensed under the MIT license _(see [LICENSE](https://github.com/daveordead/light-levels/blob/master/LICENSE) for details)_
+## Options
+
+```js
+lightLevels({
+    prefix: "light-level-",
+    frequency: 60
+});
+```
+
+| Option name | Usage | Default |
+| ----------- | ----- | ------- |
+| prefix | if `light-level-` doesn't work for you, change the prefix that comes before ['dim' | 'normal' | 'washed'] with this option | 'light-level-' |
+| frequency | Request the underlying platform to deliver readings at a certain rate which is called [requested sampling frequency](https://www.w3.org/TR/generic-sensor/#sampling-frequency). | 60 |
+
+## License
+
+Copyright (c) 2019 [David Berner](http://davidberner.co.uk)
+
+Licensed under the MIT license _(see [LICENSE.md](https://github.com/daveordead/light-levels/blob/master/LICENSE) for more details)_
