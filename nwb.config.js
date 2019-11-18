@@ -1,3 +1,10 @@
 module.exports = {
-  type: 'web-app'
-}
+  type: "web-module",
+  npm: {
+    esModules: true,
+    umd: {
+      global: "lightLevels",
+      externals: {}
+    }
+  }
+};

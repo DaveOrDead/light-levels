@@ -1,20 +1,9 @@
-import expect from 'expect'
+// import expect from "expect";
 
-describe('App template', () => {
-  let app
+// import lightLevels from "./src";
 
-  before(() => {
-    app = document.createElement('div')
-    app.id = 'app'
-    document.body.appendChild(app)
-  })
-
-  after(() => {
-    document.body.removeChild(app)
-  })
-
-  it('displays a welcome message', () => {
-    require('src/index')
-    expect(app.innerHTML).toContain('Welcome to light-levels')
-  })
-})
+// describe("Module template", () => {
+//   it("displays a welcome LightLevels", () => {
+//     expect(lightLevels).toContain("Welcome to my-module");
+//   });
+// });
