@@ -52,7 +52,7 @@ npm install light-levels --save
 ```
 A vanilla javascript plugin for polyfilling the light-level CSS @media feature.
 
-- [Usage](#usage)
+## Usage
 
 ### ES module
 
