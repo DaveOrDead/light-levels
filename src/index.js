@@ -13,7 +13,7 @@ const lightLevels = ({ prefix = "light-level-" } = {}) => {
       if (event.error.name === "NotAllowedError") {
         // Branch to code for requesting permission.
       } else if (event.error.name === "NotReadableError") {
-        console.log("Cannot connect to the sensor.");
+        console.error("Cannot connect to the sensor.");
       }
     };
 
@@ -21,9 +21,9 @@ const lightLevels = ({ prefix = "light-level-" } = {}) => {
   } catch (error) {
     // Handle construction errors.
     if (error.name === "SecurityError") {
-      console.log("Sensor construction was blocked by a feature policy.");
+      console.error("Sensor construction was blocked by a feature policy.");
     } else if (error.name === "ReferenceError") {
-      console.log("Sensor is not supported by the User Agent.");
+      console.error("Sensor is not supported by the User Agent.");
     } else {
       throw error;
     }
