@@ -1,7 +1,7 @@
-const removeClassesWithPrefix = prefix => className =>
-  className
+const removeClassesWithPrefix = prefix => classList =>
+  classList
     .split(" ")
-    .filter(klass => klass.lastIndexOf(prefix, 0) !== 0)
+    .filter(className => className.lastIndexOf(prefix, 0) !== 0)
     .join(" ")
     .trim();
 
