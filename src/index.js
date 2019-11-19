@@ -1,10 +1,8 @@
 import { getUpdateLightLevelsFunc, getUpdateDomFunc } from "./utils";
 
 const lightLevels = ({ prefix = "light-level-", frequency = 60 } = {}) => {
-  let sensor = null;
-
   try {
-    sensor = new AmbientLightSensor(frequency);
+    const sensor = new AmbientLightSensor({ frequency });
     sensor.onerror = event => {
       // Handle runtime errors.
       if (event.error.name === "NotAllowedError") {
