@@ -1,8 +1,13 @@
 import { getUpdateLightLevelsFunc, getUpdateDomFunc } from "./utils";
 
-const lightLevels = ({ prefix = "light-level-", frequency = 60 } = {}) => {
+const lightLevels = ({ prefix = "light-level-" } = {}) => {
   try {
-    const sensor = new AmbientLightSensor({ frequency });
+    const sensor = new AmbientLightSensor();
+
+    const setLightLevels = getUpdateLightLevelsFunc(getUpdateDomFunc(prefix));
+
+    sensor.onreading = () => setLightLevels(sensor.illuminance);
+
     sensor.onerror = event => {
       // Handle runtime errors.
       if (event.error.name === "NotAllowedError") {
@@ -11,10 +16,6 @@ const lightLevels = ({ prefix = "light-level-", frequency = 60 } = {}) => {
         console.log("Cannot connect to the sensor.");
       }
     };
-
-    const setLightLevels = getUpdateLightLevelsFunc(getUpdateDomFunc(prefix));
-
-    sensor.onreading = () => setLightLevels(sensor.illuminance);
 
     sensor.start();
   } catch (error) {

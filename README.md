@@ -108,15 +108,13 @@ By default this plugin applies classes of `.light-level-dim`, `.light-level-norm
 
 ```js
 lightLevels({
-    prefix: "light-level-",
-    frequency: 60
+    prefix: "light-level-"
 });
 ```
 
 | Option name | Usage | Default |
 | ----------- | ----- | ------- |
 | prefix | if `light-level-` doesn't work for you, change the prefix that comes before ['dim' | 'normal' | 'washed'] with this option | 'light-level-' |
-| frequency | Request the underlying platform to deliver readings at a certain rate which is called [requested sampling frequency](https://www.w3.org/TR/generic-sensor/#sampling-frequency). | 60 |
 
 ## License
 
