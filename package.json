@@ -1,6 +1,6 @@
 {
   "name": "light-levels",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A polyfill for the light-levels media query",
   "main": "lib/index.js",
   "module": "es/index.js",
