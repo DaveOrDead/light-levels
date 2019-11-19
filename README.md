@@ -25,6 +25,7 @@ It is worth nothing that both this JS library and PostCSS plugin can be used ind
 
 ## Table of Contents
 
+- [Demo](#Demo)
 - [Installation](#installation)
   - [npm](#npm)
   - [CDN](#CDN)
@@ -36,6 +37,9 @@ It is worth nothing that both this JS library and PostCSS plugin can be used ind
 - [Options](#options)
 - [License](#license)
 
+## Demo
+
+A working demo can be found here: [https://daveordead.github.io/light-levels-demo/](https://daveordead.github.io/light-levels-demo/)
 
 ## Installation
 
