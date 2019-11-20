@@ -26,11 +26,12 @@ It is worth nothing that both this JS library and PostCSS plugin can be used ind
 ## Table of Contents
 
 - [Demo](#Demo)
+- [Browser Support](#BrowserSupport)
 - [Installation](#installation)
   - [npm](#npm)
   - [CDN](#CDN)
 - [Usage](#usage)
-  - [ES Module](#ES-Module)
+  - [ES Module](#ESModule)
   - [CommonJS](#CommonJS)
   - [UMD](#UMD)
   - [CSS](#CSS)
@@ -40,6 +41,18 @@ It is worth nothing that both this JS library and PostCSS plugin can be used ind
 ## Demo
 
 A working demo can be found here: [https://daveordead.github.io/light-levels-demo/](https://daveordead.github.io/light-levels-demo/)
+
+
+## Browser Support
+
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br> Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox |
+
+[<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Android Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Android Chrome
+| --------- | --------- | --------- | --------- | --------- |
+| 13 | 62* | 62* | 54** | 54** |
+
+* uses deprecated `devicelight` behind [device.sensors.ambientLight.enabled](about:config) feature flag
+** Uses ALS behind [#enable-generic-sensor-extra-classes](chrome://flags/#enable-generic-sensor-extra-classes) feature flag
 
 ## Installation
 
