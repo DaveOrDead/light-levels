@@ -47,10 +47,11 @@ A working demo can be found here: [https://daveordead.github.io/light-levels-dem
 
 | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br> Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Android Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Android Chrome |
 | --------- | --------- | --------- | --------- | --------- |
-| 13 | 62 :triangular_flag_on_post: | 62 :triangular_flag_on_post: | 54 :checkered_flag: | 54 :checkered_flag: |
+| 16 | 62 :triangular_flag_on_post: | 62 :triangular_flag_on_post: | 54 :checkered_flag: | 54 :checkered_flag: |
 
 :triangular_flag_on_post: uses deprecated `ondevicelight` behind the [device.sensors.ambientLight.enabled](about:config) feature flag
-:checkered_flag: Uses AmbientLightSensor  behind the [#enable-generic-sensor-extra-classes](chrome://flags/#enable-generic-sensor-extra-classes) feature flag
+
+:checkered_flag: Uses `AmbientLightSensor` behind the [#enable-generic-sensor-extra-classes](chrome://flags/#enable-generic-sensor-extra-classes) feature flag
 
 ## Installation
 
