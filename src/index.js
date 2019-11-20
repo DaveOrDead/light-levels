@@ -1,33 +1,20 @@
-import { getUpdateLightLevelsFunc, getUpdateDomFunc } from "./utils";
+import {
+  getUpdateDomFunc,
+  getUpdateLightLevelsFunc,
+  useAmbientLightSensor,
+  useDeviceLight
+} from "./utils";
 
-const lightLevels = ({ prefix = "light-level-" } = {}) => {
-  try {
-    const sensor = new AmbientLightSensor();
+const LightLevels = ({ prefix = "light-level-" } = {}) => {
+  const updateLightLevels = getUpdateLightLevelsFunc(getUpdateDomFunc(prefix));
 
-    const setLightLevels = getUpdateLightLevelsFunc(getUpdateDomFunc(prefix));
-
-    sensor.onreading = () => setLightLevels(sensor.illuminance);
-
-    sensor.onerror = event => {
-      // Handle runtime errors.
-      if (event.error.name === "NotAllowedError") {
-        // Branch to code for requesting permission.
-      } else if (event.error.name === "NotReadableError") {
-        console.error("Cannot connect to the sensor.");
-      }
-    };
-
-    sensor.start();
-  } catch (error) {
-    // Handle construction errors.
-    if (error.name === "SecurityError") {
-      console.error("Sensor construction was blocked by a feature policy.");
-    } else if (error.name === "ReferenceError") {
-      console.error("Sensor is not supported by the User Agent.");
-    } else {
-      throw error;
-    }
+  if ("AmbientLightSensor" in window) {
+    return useAmbientLightSensor(updateLightLevels);
+  } else if ("ondevicelight" in window) {
+    return useDeviceLight(updateLightLevels);
+  } else {
+    console.error("Sorry, your device does not support LightLevels");
   }
 };
 
-export default lightLevels;
+export default LightLevels;
