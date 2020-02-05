@@ -134,6 +134,6 @@ lightLevels({
 
 ## License
 
-Copyright (c) 2019 [David Berner](http://davidberner.co.uk)
+Copyright (c) 2020 [David Berner](https://davidberner.co.uk)
 
 Licensed under the MIT license _(see [LICENSE.md](https://github.com/daveordead/light-levels/blob/master/LICENSE) for more details)_
