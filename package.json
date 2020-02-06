@@ -1,6 +1,6 @@
 {
   "name": "light-levels",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "A polyfill for the light-levels media query",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -20,10 +20,10 @@
   "dependencies": {},
   "devDependencies": {
     "babel-eslint": "^10.0.3",
-    "eslint": "^6.6.0",
-    "eslint-config-prettier": "^6.6.0",
-    "eslint-plugin-prettier": "^3.1.1",
-    "nwb": "0.23.x",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "nwb": "0.23.0",
     "prettier": "^1.19.1"
   },
   "author": "David Berner <david@davidberner.co.uk>",
