@@ -1,7 +1,7 @@
 import expect from "expect";
 import { LUX_SPEC_NAMES } from "../../constants";
 
-import getLuxName from ".";
+import getLuxName from "./getLuxName";
 
 describe("Utility - getLuxName", () => {
   it("Should return 'dim' if lux is less than 50", () => {

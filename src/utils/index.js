@@ -1,6 +1,6 @@
-export { default as getLuxName } from "./get-lux-name";
-export { default as getUpdateDomFunc } from "./get-update-dom-func";
-export { default as getUpdateLightLevelsFunc } from "./get-update-light-levels-func";
-export { default as removeClassesWithPrefix } from "./remove-classes-with-prefix";
-export { default as useAmbientLightSensor } from "./use-ambient-light-sensor";
-export { default as useDeviceLight } from "./use-device-light";
+export { default as getLuxName } from "./getLuxName";
+export { default as removeClassesWithPrefix } from "./removeClassesWithPrefix";
+export { default as setLightLevel } from "./setLightLevel";
+export { default as setLightLevelClasses } from "./setLightLevelClasses";
+export { default as useAmbientLightSensor } from "./useAmbientLightSensor";
+export { default as useDeviceLight } from "./useDeviceLight";

@@ -1,5 +1,5 @@
 import expect from "expect";
-import removeClassesWithPrefix from ".";
+import removeClassesWithPrefix from "./removeClassesWithPrefix";
 
 describe("Utility - removeClassesWithPrefix", () => {
   it("Should remove a single class that has a specified prefix", () => {

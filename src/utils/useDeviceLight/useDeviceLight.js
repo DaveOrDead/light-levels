@@ -13,6 +13,7 @@ const createDeviceLightSensor = callback => {
       console.warn("This instance of LightLevels is already running");
     }
   };
+
   const stop = () => {
     if (state.isActive) {
       window.removeEventListener("devicelight", handleDeviceLight);
@@ -21,6 +22,7 @@ const createDeviceLightSensor = callback => {
       console.warn("This instance of LightLevels has already been stopped");
     }
   };
+
   return Object.freeze({
     start,
     stop

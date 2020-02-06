@@ -1,17 +1,17 @@
 import {
-  getUpdateDomFunc,
-  getUpdateLightLevelsFunc,
+  setLightLevel,
+  setLightLevelClasses,
   useAmbientLightSensor,
   useDeviceLight
 } from "./utils";
 
 const LightLevels = ({ prefix = "light-level-" } = {}) => {
-  const updateLightLevels = getUpdateLightLevelsFunc(getUpdateDomFunc(prefix));
+  const setClassNames = setLightLevel(setLightLevelClasses(prefix));
 
   if ("AmbientLightSensor" in window) {
-    return useAmbientLightSensor(updateLightLevels);
+    return useAmbientLightSensor(setClassNames);
   } else if ("ondevicelight" in window) {
-    return useDeviceLight(updateLightLevels);
+    return useDeviceLight(setClassNames);
   } else {
     console.error("Sorry, your device does not support LightLevels");
   }
