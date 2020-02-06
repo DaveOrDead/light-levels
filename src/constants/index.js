@@ -1,3 +1,1 @@
-import LUX_SPEC_NAMES from "./luxSpecNames";
-
-export { LUX_SPEC_NAMES };
+export { default as LUX_SPEC_NAMES } from "./luxSpecNames";
