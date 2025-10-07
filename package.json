@@ -23,7 +23,7 @@
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
-    "nwb": "0.23.0",
+    "nwb": "0.25.2",
     "prettier": "^1.19.1"
   },
   "author": "David Berner <david@davidberner.co.uk>",
